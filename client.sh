@@ -21,7 +21,3 @@ sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 apt-get update
 apt-get -y install google-chrome-stable
 apt-get -y install xorg
-
-#apt-get install -y nodejs
-#apt-get install -y npm
-#npm install -g lighthouse
