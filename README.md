@@ -66,11 +66,17 @@ It's also necesary, for the host machine, to run an X-server, like Xming.
 
 ### Docker
 In the container 3 websites can be found:
-  - Game of Thrones
-  - Global master
-  - Eforlad travel
+  - Game of Thrones 
+![image](https://user-images.githubusercontent.com/74667849/115530108-c392c480-a293-11eb-9bc9-c8786cd0f609.png)
 
-|Characteristics     | Game of Thrones  | Global master  | Eforlad travel  |
+  - Global master 
+ ![image](https://user-images.githubusercontent.com/74667849/115530015-af4ec780-a293-11eb-9766-d0246da6c9e1.png)
+
+  - Eforlad travel
+![image](https://user-images.githubusercontent.com/74667849/115530279-e91fce00-a293-11eb-90ca-0b12e5c6ec25.png)
+
+#### Characteristics 
+|                    | Game of Thrones  | Global master  | Eforlad travel  |
 | ------------------ | ---------------- | -------------- | --------------- |
 | Weight             | 3 MB             | 1 MB           | 2 MB            |
 | Number of requests | 39               | 56             | 19              |
