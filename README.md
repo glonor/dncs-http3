@@ -2,8 +2,8 @@
 
 ## Index
 
-- [Introduction] (#introduction)
-- [Design] (#design)
+* [Introduction] (#introduction)
+* [Design] (#design)
   - [Vagrant] (#vagrant)
   - [Docker] (#docker)
 - [Performance evaluation] (#performance-Evaluation)
