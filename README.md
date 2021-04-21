@@ -99,6 +99,7 @@ This will launch Chrome and enable quic.
 ![image](https://user-images.githubusercontent.com/74667849/115520145-22ebd700-a28a-11eb-8b4d-adf6e29b5f84.png)
 
 #### Global master
+![image](https://user-images.githubusercontent.com/74667849/115527790-aceb6e00-a291-11eb-8216-5e341bb605f9.png)
 
 
 #### Eforlad travel
