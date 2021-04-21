@@ -65,7 +65,15 @@ The important things to highlight in the vagrant file are the following:
 It's also necesary, for the host machine, to run an X-server, like Xming.
 
 ### Docker
+In the container 3 websites can be found:
+  - Game of Thrones
+  - Global master
+  - Eforlad travel
 
+|Characteristics     | Game of Thrones  | Global master  | Eforlad travel  |
+| ------------------ | ---------------- | -------------- | --------------- |
+| Weight             | 3 MB             | 1 MB           | 2 MB            |
+| Number of requests | 39               | 56             | 19              |
 
 ## Performance evaluation
 
@@ -87,8 +95,16 @@ This will launch Chrome and enable quic.
 
 ### Results
 
+#### Game of Thrones
+![image](https://user-images.githubusercontent.com/74667849/115520145-22ebd700-a28a-11eb-8b4d-adf6e29b5f84.png)
 
+#### Global master
+![image](https://user-images.githubusercontent.com/74667849/115520190-2f702f80-a28a-11eb-99ce-9629a8e314db.png)
+
+#### Eforlad travel
+![image](https://user-images.githubusercontent.com/74667849/115519940-f1730b80-a289-11eb-9e38-4ebfabb111f5.png)
 
 ## Conclusions
-
+Although we thought the HTTP3+QUIC was the fastest protocol, during the experiments and as can be seen in the results, the TCP protocol was the swiftest.
+Another important statement is that the loading time is more influenced by the number of requst instead of the page weight. In fact, the page Game of Thrones has more requests, 39 vs 56 of Erforlad travel, and its time, using TCP as reference, is 537 ms vs 916 ms. 
 
