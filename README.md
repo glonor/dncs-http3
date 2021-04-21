@@ -103,8 +103,7 @@ This will launch Chrome and enable quic.
 
 
 #### Eforlad travel
-
-
+![image](https://user-images.githubusercontent.com/74667849/115528908-bcb78200-a292-11eb-9b45-de089e86646f.png)
 
 ## Conclusions
 Although we thought the HTTP3+QUIC was the fastest protocol, during the experiments and as can be seen in the results, the TCP protocol was the swiftest.
