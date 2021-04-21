@@ -4,10 +4,10 @@
 
 * [Introduction] (#introduction)
 * [Design] (#design)
-  - [Vagrant] (#vagrant)
-  - [Docker] (#docker)
-- [Performance evaluation] (#performance-Evaluation)
-- [Conclusions] (#conclusions)
+  * [Vagrant] (#vagrant)
+  * [Docker] (#docker)
+* [Performance evaluation] (#performance-Evaluation)
+* [Conclusions] (#conclusions)
 &nbsp;
 
 
