@@ -12,7 +12,7 @@
 
 ## Group members
 
-This project was made by Khelifi Mouez () - Chini Emanuale (202488) - Malagò Francesco (172080)
+This project was made by Khelifi Mouez (188409) - Chini Emanuale (202488) - Malagò Francesco (172080)
 
 ## Introduction
 
