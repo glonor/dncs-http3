@@ -70,7 +70,7 @@ The important things to highlight in the vagrant file are the following:
 It's also necesary, for the host machine, to run an X-server, like Xming.
 
 ### Docker
-In the container 3 websites can be found:
+In each container 3 websites can be found:
   - Game of Thrones 
 ![image](https://user-images.githubusercontent.com/74667849/115530108-c392c480-a293-11eb-9bc9-c8786cd0f609.png)
 
@@ -84,6 +84,7 @@ In the container 3 websites can be found:
 |                    | Game of Thrones  | Global master  | Eforlad travel  |
 | ------------------ | ---------------- | -------------- | --------------- |
 | Weight             | 3 MB             | 1 MB           | 2 MB            |
+| Number of requests | 39               | 19             | 56              |
 
 ## Performance evaluation
 
@@ -92,7 +93,7 @@ As mentioned earlier, to compare the various protocols performance we used Googl
 After the system is running, Chrome must be run using this command:
 
 ```bash
-google-chrome --enable-quic --quic-version=h3-27
+google-chrome --enable-quic --quic-version=h3-29
 ```
 This will launch Chrome and enable quic.
 
@@ -113,8 +114,7 @@ This will launch Chrome and enable quic.
 |                    | Tcp      | Http2    | Http3 + quic    |
 | ------------------ | -------- | -------- | -------- |
 | Weight             | 3 MB     | 3 MB     | 3 MB     |
-| Number of requests | 39       | 40       | 40       |
-| Load time          | ms   |  ms   |  ms  |
+| Load time          | 537 ms   | 862 ms   |  803 ms  |
 
 #### Global master
 ![image](https://user-images.githubusercontent.com/74667849/115527790-aceb6e00-a291-11eb-8216-5e341bb605f9.png)
@@ -122,8 +122,7 @@ This will launch Chrome and enable quic.
 |                    | Tcp      | Http2    | Http3 + quic    |
 | ------------------ | -------- | -------- | -------- |
 | Weight             | 1 MB     | 1 MB     | 1 MB     |
-| Number of requests | 19       | 19       | 19       |
-| Load time          | ms   |  ms   |  ms  |
+| Load time          | 330 ms   | 388 ms   | 433 ms  |
 
 #### Eforlad travel
 ![image](https://user-images.githubusercontent.com/74667849/115528908-bcb78200-a292-11eb-9b45-de089e86646f.png)
@@ -131,8 +130,7 @@ This will launch Chrome and enable quic.
 |                    | Tcp      | Http2    | Http3 + quic    |
 | ------------------ | -------- | -------- | -------- |
 | Weight             | 2 MB     | 2 MB     | 2 MB     |
-| Number of requests | 57       | 58       | 57       |
-| Load time          | ms   |  ms   |  ms  |
+| Load time          | 916 ms   | 822 ms   | 1230 ms  |
 
 ## Conclusions
 Although we thought the HTTP3+QUIC was the fastest protocol, during the experiments and as can be seen in the results, the TCP protocol was the swiftest.
