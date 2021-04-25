@@ -111,26 +111,23 @@ This will launch Chrome and enable quic.
 #### Game of Thrones
 ![image](https://user-images.githubusercontent.com/74667849/115529342-1e77ec00-a293-11eb-9046-afeaf2f1241a.png)
 
-|                    | Tcp      | Http2    | Http3 + quic    |
+|                    | Http3 + quic | Http2    | Tcp   |
 | ------------------ | -------- | -------- | -------- |
-| Weight             | 3 MB     | 3 MB     | 3 MB     |
-| Load time          | 537 ms   | 862 ms   |  803 ms  |
+| Load time          |803 ms   | 862 ms   |   537 ms  |
 
 #### Global master
 ![image](https://user-images.githubusercontent.com/74667849/115527790-aceb6e00-a291-11eb-8216-5e341bb605f9.png)
 
-|                    | Tcp      | Http2    | Http3 + quic    |
+|                    | Http3 + quic     | Http2    |  Tcp    |
 | ------------------ | -------- | -------- | -------- |
-| Weight             | 1 MB     | 1 MB     | 1 MB     |
-| Load time          | 330 ms   | 388 ms   | 433 ms  |
+| Load time          |  433ms   | 388 ms   | 330 ms  |
 
 #### Eforlad travel
 ![image](https://user-images.githubusercontent.com/74667849/115528908-bcb78200-a292-11eb-9b45-de089e86646f.png)
 
-|                    | Tcp      | Http2    | Http3 + quic    |
+|                    |    Http3 + quic    | Http2    | Tcp    |
 | ------------------ | -------- | -------- | -------- |
-| Weight             | 2 MB     | 2 MB     | 2 MB     |
-| Load time          | 916 ms   | 822 ms   | 1230 ms  |
+| Load time          | 1230 ms   | 822 ms   |  916 ms  |
 
 ## Conclusions
 Although we thought the HTTP3+QUIC was the fastest protocol, during the experiments and as can be seen in the results, the TCP protocol was the swiftest.
