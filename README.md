@@ -149,9 +149,11 @@ Report settings:
 
 #### Game of Thrones
 ![image](https://user-images.githubusercontent.com/74667849/116053232-bc482e00-a67a-11eb-9f5d-302f4ff5feb6.png)
+
 |                    |    Http3 + quic    | Http2    | Tcp    |
 | ------------------ | -------- | -------- | -------- |
 | Performance (%)    |  87  |92  | 89   |
+
 ![image](https://user-images.githubusercontent.com/74667849/116051980-7c347b80-a679-11eb-8f96-c2675408586d.png)
 
 #### Eforlad travel
@@ -161,6 +163,7 @@ Report settings:
 |                    |    Http3 + quic    | Http2    | Tcp    |
 | ------------------ | -------- | -------- | -------- |
 | Performance (%)    |   73 | 75 | 71   |
+
 ![image](https://user-images.githubusercontent.com/74667849/116052029-88b8d400-a679-11eb-8b21-ed9cbe476278.png)
 
 #### Global master
