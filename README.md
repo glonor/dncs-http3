@@ -116,19 +116,19 @@ This will launch Chrome and enable quic.
 | ------------------ | -------- | -------- | -------- |
 | Load time          |803 ms   | 862 ms   |   537 ms  |
 
-#### Global master
-![image](https://user-images.githubusercontent.com/74667849/115527790-aceb6e00-a291-11eb-8216-5e341bb605f9.png)
-
-|                    | Http3 + quic     | Http2    |  Tcp    |
-| ------------------ | -------- | -------- | -------- |
-| Load time          |  433ms   | 388 ms   | 330 ms  |
-
 #### Eforlad travel
 ![image](https://user-images.githubusercontent.com/74667849/115528908-bcb78200-a292-11eb-9b45-de089e86646f.png)
 
 |                    |    Http3 + quic    | Http2    | Tcp    |
 | ------------------ | -------- | -------- | -------- |
 | Load time          | 1230 ms   | 822 ms   |  916 ms  |
+
+#### Global master
+![image](https://user-images.githubusercontent.com/74667849/115527790-aceb6e00-a291-11eb-8216-5e341bb605f9.png)
+
+|                    | Http3 + quic     | Http2    |  Tcp    |
+| ------------------ | -------- | -------- | -------- |
+| Load time          |  433ms   | 388 ms   | 330 ms  |
 
 ### Lightouse report
 In addition to the Dev Tools we decided to use Lightouse to create reports which measure the performance of the protocols. 
@@ -143,7 +143,37 @@ These are:
 |Total Blocking Time|  	25%|  
 |Cumulative Layout Shift|  	5%|  
 
-#### Report settings
+Report settings:
+- Network: 40 ms TCP RTT, 10,240 kbps throughput
+- CPU throttling: 1x slowdown
+
+#### Game of Thrones
+![image](https://user-images.githubusercontent.com/74667849/116053232-bc482e00-a67a-11eb-9f5d-302f4ff5feb6.png)
+|                    |    Http3 + quic    | Http2    | Tcp    |
+| ------------------ | -------- | -------- | -------- |
+| Performance (%)    |  87  |92  | 89   |
+![image](https://user-images.githubusercontent.com/74667849/116051980-7c347b80-a679-11eb-8f96-c2675408586d.png)
+
+#### Eforlad travel
+
+![image](https://user-images.githubusercontent.com/74667849/116053793-5a3bf880-a67b-11eb-91ab-0dc3f1eeb31b.png)
+
+|                    |    Http3 + quic    | Http2    | Tcp    |
+| ------------------ | -------- | -------- | -------- |
+| Performance (%)    |   73 | 75 | 71   |
+![image](https://user-images.githubusercontent.com/74667849/116052029-88b8d400-a679-11eb-8b21-ed9cbe476278.png)
+
+#### Global master
+
+![image](https://user-images.githubusercontent.com/74667849/116053733-48f2ec00-a67b-11eb-9bb9-a4c80af0e103.png)
+
+|                    |    Http3 + quic    | Http2    | Tcp    |
+| ------------------ | -------- | -------- | -------- |
+| Performance (%)    | 97   | 97 | 93   |
+
+![image](https://user-images.githubusercontent.com/74667849/116052000-822a5c80-a679-11eb-85aa-0db388f0f1ef.png)
+
+
 
 ## Conclusions
 Although we thought the HTTP3+QUIC was the fastest protocol, during the experiments and as can be seen in the results, the TCP protocol was the swiftest.
