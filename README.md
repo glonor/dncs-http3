@@ -188,3 +188,7 @@ Http/3 is still in the development phase, in the future, we could expect increas
 Ligthouse: 
  https://developers.google.com/web/tools/lighthouse/?utm_source=devtools#extensibility 
  https://geekflare.com/google-lighthouse/
+Putty gen:
+ https://jcook0017.medium.com/how-to-enable-x11-forwarding-in-windows-10-on-a-vagrant-virtual-box-running-ubuntu-d5a7b34363f
+Http3 + ngnix:
+ https://faun.pub/implementing-http3-quic-nginx-99094d3e39f
