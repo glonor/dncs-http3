@@ -159,7 +159,7 @@ A more in depth guide can be found in the [References](#other-references).
 
 As mentioned earlier, to compare the various protocols performance we used Google Chrome, its Dev Tools and Lighthouse.
 
-After the system is running, Chrome must be run using this command:
+After the system is running, Chrome must be run by the client using this command:
 
 ```bash
 google-chrome --enable-quic --quic-version=h3-29
