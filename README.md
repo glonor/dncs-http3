@@ -212,7 +212,7 @@ These are:
 |Cumulative Layout Shift|  	5%|  
 
 Report settings:
-- Network: 40 ms TCP RTT, 10,240 kbps throughput
+- Network: 10,240 kbps throughput
 - CPU throttling: 1x slowdown
 
 #### Game of Thrones
