@@ -7,6 +7,7 @@
   * [Vagrant](#vagrant)
   * [Docker](#docker)
 * [Performance evaluation](#performance-Evaluation)
+  * [Lighthouse](#lighthouse)
 * [Conclusions](#conclusions)
 &nbsp;
 
@@ -88,7 +89,7 @@ In each container 3 websites can be found:
 
 ## Performance evaluation
 
-As mentioned earlier, to compare the various protocols performance we used Google Chrome and its Dev Tools.
+As mentioned earlier, to compare the various protocols performance we used Google Chrome, its Dev Tools and Lighthouse.
 
 After the system is running, Chrome must be run using this command:
 
@@ -129,6 +130,21 @@ This will launch Chrome and enable quic.
 | ------------------ | -------- | -------- | -------- |
 | Load time          | 1230 ms   | 822 ms   |  916 ms  |
 
+### Lightouse report
+In addition to the Dev Tools we decided to use Lightouse to create reports which measure the performance of the protocols. 
+The Lighthouse Performance score is a  weighted average of 6 metric scores.
+These are:
+|Audit|	Weight|
+| -------- | -------- |
+|First Contentful Paint|	15%|
+|  Speed Index	|  15%|
+|Largest Contentful Paint|  	25|
+||Time to Interactive|  	15%|
+|Total Blocking Time|  	25%|  
+|Cumulative Layout Shift|  	5%|  
+
+#### Report settings
+
 ## Conclusions
 Although we thought the HTTP3+QUIC was the fastest protocol, during the experiments and as can be seen in the results, the TCP protocol was the swiftest.
 Another important statement is that the loading time is more influenced by the number of requst instead of the page weight. In fact, the page Game of Thrones has more requests, 39 vs 56 of Erforlad travel, and its time, using TCP as reference, is 537 ms vs 916 ms.
@@ -136,4 +152,4 @@ Another important statement is that the loading time is more influenced by the n
 Http/3 is still in the development phase, in the future, we could expect increased performance in a real-world scenario where UDP connections, parallel loading of resources and better congestion control will play a significant role.
 
 ## Other references
-
+Ligthouse: https://developers.google.com/web/tools/lighthouse/?utm_source=devtools#extensibility 
