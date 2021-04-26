@@ -14,6 +14,7 @@
 * [Performance evaluation](#performance-evaluation)
   * [Lighthouse](#lightouse-report)
 * [Conclusions](#conclusions)
+* [Other references](#other-references)
 &nbsp;
 
 ## Group members
@@ -64,6 +65,7 @@ The 3 Docker containers are reachable through the following ports:
 | HTTP/2        |   90  , 643   |
 | HTTP/3 + QUIC |   80  , 443   |
 
+More on this will be discussed in the [deployment part](#deployment)
 
 ## Implementation
 
@@ -85,7 +87,7 @@ It's also necesary, for the host machine, to run an X-server, like Xming.
 
 ### Docker
 
-The Docker image used is based on NGINX 1.16.1 over Ubuntu 18.04 in order to use the [Quiche patch] (https://blog.cloudflare.com/experiment-with-http-3-using-nginx-and-quiche/).
+The Docker image used is based on NGINX 1.16.1 over Ubuntu 18.04 in order to use the [Quiche patch](https://blog.cloudflare.com/experiment-with-http-3-using-nginx-and-quiche/).
 
 #### TLS certificates
 
@@ -139,6 +141,7 @@ sudo docker run --name nginx1 -d -p 100:80 -p 743:443/tcp -p 743:443/udp -v /vag
 ```
 
 These 3 lines will run the Docker image mouezkhelifi/nginx-quic hosted on [the official Docker hub](https://hub.docker.com/r/mouezkhelifi/nginx-quic) using the 3 `.conf` files discussed earlier in order to use all protocols.
+As mentioned in the [design part](#design) each protocol has its own ports defined by these 3 lines.
 
 In order to run Google Chrome and evaluate the performance we have already enabled the X11 forwarding and run Xming.
 
