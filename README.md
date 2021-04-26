@@ -139,7 +139,7 @@ These are:
 |First Contentful Paint|	15%|
 |  Speed Index	|  15%|
 |Largest Contentful Paint|  	25|
-||Time to Interactive|  	15%|
+|Time to Interactive|  	15%|
 |Total Blocking Time|  	25%|  
 |Cumulative Layout Shift|  	5%|  
 
