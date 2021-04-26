@@ -97,6 +97,9 @@ In order to function, Quic needs TLS certificates that can be issued with this c
 certbot certonly --standalone --non-interactive --agree-tos -d your.domain.com -m your@email.com
 ```
 
+This command generates two file: `fullchain.pem` and `privkey.pem` that must be placed in `docker/certs` directory.
+These files have been omitted for security reasons.
+
 #### Web-server image
 
 In the `docker` directory we can find a file named `Dockerfile`, this file contains all the commands needed to build the Docker image.
