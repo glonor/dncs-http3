@@ -112,13 +112,13 @@ There are 3 Docker containers running on the web-server, in each container runs 
 
   - Game of Thrones 
 ![image](https://user-images.githubusercontent.com/74667849/115530108-c392c480-a293-11eb-9bc9-c8786cd0f609.png)
-Fonte: https://speckyboy.com/free-responsive-html5-web-templates/
+ 
   - Global master 
  ![image](https://user-images.githubusercontent.com/74667849/115530015-af4ec780-a293-11eb-9766-d0246da6c9e1.png)
-Fonte: https://speckyboy.com/free-responsive-html5-web-templates/
+
   - Eforlad travel
 ![image](https://user-images.githubusercontent.com/74667849/115530279-e91fce00-a293-11eb-90ca-0b12e5c6ec25.png)
-Fonte: https://www.toocss.com/free-responsive-html-css-templates/
+
 
 #### Characteristics 
 |                    | Game of Thrones  | Global master  | Eforlad travel  |
@@ -259,3 +259,7 @@ Putty gen:
 
 Http3 + ngnix:
 - https://faun.pub/implementing-http3-quic-nginx-99094d3e39f
+
+Websites: 
+- https://speckyboy.com/free-responsive-html5-web-templates/
+- https://www.toocss.com/free-responsive-html-css-templates/
