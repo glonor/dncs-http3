@@ -22,6 +22,10 @@ To do this we used Vagrant and Virtualbox for managing the virtual machines, and
 
 Suggested reference: https://blog.cloudflare.com/experiment-with-http-3-using-nginx-and-quiche/
 
+## Why Http/3 + Quic?
+
+
+
 ## Design
 
 The network setup is the following:
@@ -71,7 +75,26 @@ The important things to highlight in the vagrant file are the following:
 It's also necesary, for the host machine, to run an X-server, like Xming.
 
 ### Docker
-In each container 3 websites can be found:
+
+The Docker image used is based on NGINX 1.16.1 over Ubuntu 18.04 in order to use the [Quiche patch] (https://blog.cloudflare.com/experiment-with-http-3-using-nginx-and-quiche/).
+
+#### TLS certificates
+
+In order to function, Quic needs TLS certificates that can be issued for your domain with this command:
+
+```bash
+certbot certonly --standalone --non-interactive --agree-tos -d your.domain.com -m your@email.com
+```
+
+#### Web-server image
+
+In the `docker` directory we can find a file named `Dockerfile`, this file contains all the commands needed to build the Docker image.
+At this point the image is configured to use only Http/3, but can be forced to use Http/2 and TCP as well using the `.conf` files found in the `confs` directory.
+
+#### Websites
+
+There are 3 Docker containers running on the web-server, in each container runs a Docker image where the following 3 websites can be found:
+
   - Game of Thrones 
 ![image](https://user-images.githubusercontent.com/74667849/115530108-c392c480-a293-11eb-9bc9-c8786cd0f609.png)
 
@@ -185,12 +208,4 @@ Another important statement is that the loading time is more influenced by the n
 Http/3 is still in the development phase, in the future, we could expect increased performance in a real-world scenario where UDP connections, parallel loading of resources and better congestion control will play a significant role.
 
 ## Other references
-Ligthouse: 
-- https://developers.google.com/web/tools/lighthouse/?utm_source=devtools#extensibility 
-- https://geekflare.com/google-lighthouse/
-
-Putty gen:
-- https://jcook0017.medium.com/how-to-enable-x11-forwarding-in-windows-10-on-a-vagrant-virtual-box-running-ubuntu-d5a7b34363f
-
-Http3 + ngnix:
-- https://faun.pub/implementing-http3-quic-nginx-99094d3e39f
+Ligthouse: https://developers.google.com/web/tools/lighthouse/?utm_source=devtools#extensibility 
