@@ -185,4 +185,6 @@ Another important statement is that the loading time is more influenced by the n
 Http/3 is still in the development phase, in the future, we could expect increased performance in a real-world scenario where UDP connections, parallel loading of resources and better congestion control will play a significant role.
 
 ## Other references
-Ligthouse: https://developers.google.com/web/tools/lighthouse/?utm_source=devtools#extensibility 
+Ligthouse: 
+ https://developers.google.com/web/tools/lighthouse/?utm_source=devtools#extensibility 
+ https://geekflare.com/google-lighthouse/
