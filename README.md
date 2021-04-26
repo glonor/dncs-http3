@@ -7,7 +7,7 @@
   * [Vagrant](#vagrant)
   * [Docker](#docker)
 * [Performance evaluation](#performance-Evaluation)
-  * [Lighthouse](#Lightouse report)
+  * [Lighthouse](#Lightouse-report)
 * [Conclusions](#conclusions)
 &nbsp;
 
