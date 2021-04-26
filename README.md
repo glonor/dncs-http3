@@ -4,10 +4,14 @@
 
 * [Introduction](#introduction)
 * [Design](#design)
+* [Implementation](#implementation)
   * [Vagrant](#vagrant)
   * [Docker](#docker)
+  * [TLS certificates](#tls-certificates)
+  * [Web-server image](#web-server-image)
+  * [Websites](#websites)
 * [Performance evaluation](#performance-Evaluation)
-  * [Lighthouse](#Lightouse-report)
+  * [Lighthouse](#lightouse-report)
 * [Conclusions](#conclusions)
 &nbsp;
 
@@ -24,7 +28,11 @@ Suggested reference: https://blog.cloudflare.com/experiment-with-http-3-using-ng
 
 ## Why Http/3 + Quic?
 
+Quic is beneficial in many cases:
 
+* **Faster handshake**: In a TLS handshake the are 4 round-trip requests involved, plus those needed by TCP. Quic replaces all of this with a single handshake.
+* **No head-of-line blocking**: In Http/2 a single lost packet can block an entire line of data. Quic solves this problem by allowing streams of data to reach their destination independently.
+* **Network switching will not affect connection**: In the classic case where a mobile device switches from a WiFi connection to a mobile network, all TCP connections are lost. Quic prevents this by giving each connection to a web server a unique identifier.
 
 ## Design
 
