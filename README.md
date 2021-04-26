@@ -99,7 +99,7 @@ certbot certonly --standalone --non-interactive --agree-tos -d your.domain.com -
 
 In the `docker` directory we can find a file named `Dockerfile`, this file contains all the commands needed to build the Docker image.
 
-At this point the image is configured to use only Http/3, but can be forced to use Http/2 and TCP as well using the `.conf` files found in the `confs` directory.
+At this point the image is configured to use Http/3, but can be forced to use Http/2 and TCP as well editing the respective configuration file found in the confs directory.
 
 We also have registered a [DuckDns domain](https://www.duckdns.org/) to which we have associated the `192.168.2.2` address and the TLS certificates issued earlier.
 Client wise, this domain is echoed through the command `echo '192.168.2.2 dncs-http3.duckdns.org' >> /etc/hosts`
@@ -139,6 +139,14 @@ sudo docker run --name nginx1 -d -p 100:80 -p 743:443/tcp -p 743:443/udp -v /vag
 ```
 
 These 3 lines will run the Docker image mouezkhelifi/nginx-quic hosted on [the official Docker hub](https://hub.docker.com/r/mouezkhelifi/nginx-quic) using the 3 `.conf` files discussed earlier in order to use all protocols.
+
+In order to run Google Chrome and evaluate the performance we have already enabled the X11 forwarding and run Xming.
+
+We now need an SSH client, for example Putty.
+
+Putty needs the Vagrant SSH key, using PuttyGen navigate to `.vagrant\machines\default\virtualbox` and generate a private key.
+After loading the private key in Putty, make sure to enable X11 forwarding, this will be needed in the next part.
+A more in depth guide can be found in the [References](#other-references).
 
 ## Performance evaluation
 
