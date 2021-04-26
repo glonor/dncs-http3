@@ -57,6 +57,8 @@ The entire environment will be managed by Vagrant.
 | Router       | enp0s9        | 192.168.2.1 |    2    |
 | Web-server   | enp0s8        | 192.168.2.2 |    2    |
 
+![image](https://user-images.githubusercontent.com/74667849/116140052-0bbc4780-a6d7-11eb-8464-0f08c78ed61b.png)
+
 The 3 Docker containers are reachable through the following ports:
 
 | Protocol      | Ports         | 
