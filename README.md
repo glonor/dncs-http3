@@ -10,7 +10,8 @@
   * [TLS certificates](#tls-certificates)
   * [Web-server image](#web-server-image)
   * [Websites](#websites)
-* [Performance evaluation](#performance-Evaluation)
+* [Deployment](#deployment)
+* [Performance evaluation](#performance-evaluation)
   * [Lighthouse](#lightouse-report)
 * [Conclusions](#conclusions)
 &nbsp;
@@ -117,6 +118,23 @@ There are 3 Docker containers running on the web-server, in each container runs 
 | ------------------ | ---------------- | -------------- | --------------- |
 | Weight             | 3 MB             | 1 MB           | 2 MB            |
 | Number of requests | 39               | 19             | 56              |
+
+## Deployment
+
+After cloning the repository, the system can be run by using `vagrant up`
+This will create the virtual machines and will run each start-up script.
+
+In `web-server.sh` there are 3 similar lines that are:
+
+```
+sudo docker run --name nginx3 -d -p 80:80 -p 443:443/tcp -p 443:443/udp -v /vagrant/docker/confs/http3.nginx.conf:/etc/nginx/nginx.conf -v /vagrant/docker/certs/:/etc/nginx/certs/ -v /vagrant/docker/web/:/etc/nginx/html/ mouezkhelifi/nginx-quic
+
+sudo docker run --name nginx2 -d -p 90:80 -p 643:443/tcp -p 643:443/udp -v /vagrant/docker/confs/http2.nginx.conf:/etc/nginx/nginx.conf -v /vagrant/docker/certs/:/etc/nginx/certs/ -v /vagrant/docker/web/:/etc/nginx/html/ mouezkhelifi/nginx-quic
+
+sudo docker run --name nginx1 -d -p 100:80 -p 743:443/tcp -p 743:443/udp -v /vagrant/docker/confs/tcp.nginx.conf:/etc/nginx/nginx.conf -v /vagrant/docker/certs/:/etc/nginx/certs/ -v /vagrant/docker/web/:/etc/nginx/html/ mouezkhelifi/nginx-quic
+```
+
+These 3 lines will run the Docker image mouezkhelifi/nginx-quic hosted on [the official Docker hub](https://hub.docker.com/r/mouezkhelifi/nginx-quic) using the 3 `.conf` files discussed earlier in order to use all protocols.
 
 ## Performance evaluation
 
