@@ -89,7 +89,7 @@ The Docker image used is based on NGINX 1.16.1 over Ubuntu 18.04 in order to use
 
 #### TLS certificates
 
-In order to function, Quic needs TLS certificates that can be issued for your domain with this command:
+In order to function, Quic needs TLS certificates that can be issued with this command:
 
 ```bash
 certbot certonly --standalone --non-interactive --agree-tos -d your.domain.com -m your@email.com
@@ -98,7 +98,11 @@ certbot certonly --standalone --non-interactive --agree-tos -d your.domain.com -
 #### Web-server image
 
 In the `docker` directory we can find a file named `Dockerfile`, this file contains all the commands needed to build the Docker image.
+
 At this point the image is configured to use only Http/3, but can be forced to use Http/2 and TCP as well using the `.conf` files found in the `confs` directory.
+
+We also have registered a [DuckDns domain](https://www.duckdns.org/) to which we have associated the `192.168.2.2` address and the TLS certificates issued earlier.
+Client wise, this domain is echoed through the command `echo '192.168.2.2 dncs-http3.duckdns.org' >> /etc/hosts`
 
 #### Websites
 
